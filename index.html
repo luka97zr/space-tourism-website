@@ -14,12 +14,19 @@
   <div class="body_wrapper">
       <nav class="navigaton_top">
           <div class="navigation__logo"><img src="starter-code/assets/shared/logo.svg" alt=""></div>
-          <ul class="navigation__menu">
-              <li class="active navigation-list"><a href="#"><strong>00 </strong>Home</a> </li>
-              <li class="navigation-list"><a href="destination.html"><strong>01 </strong>Destination</a></li>
-              <li class="navigation-list"><a href="crew.html"><strong>02 </strong>Crew</a></li>
-              <li class="navigation-list"><a href="technology.html"><strong>04 </strong>Technology</a></li>
-          </ul>
+          <div class="nav">
+            <ul class="navigation__menu">
+                <li class="active navigation-list"><a href="#"><strong>00 </strong>Home</a> </li>
+                <li class="navigation-list"><a href="destination.html"><strong>01 </strong>Destination</a></li>
+                <li class="navigation-list"><a href="crew.html"><strong>02 </strong>Crew</a></li>
+                <li class="navigation-list"><a href="technology.html"><strong>04 </strong>Technology</a></li>
+            </ul>
+        </div>
+         <!-- Mobile -->
+         <div class="nav_burger  " id="mySidenav" >
+          <div  class="menu_btn--lines" id="menu_lines"></div>
+      </div>
+            
       </nav>
       <div class="index__main">
           <div class="index__main--content">
@@ -28,7 +35,11 @@
                 outer space and not hover kind of on the edge of it. Well sit back, and relax 
                 because we’ll give you a truly out of this world experience!</p>
           </div>
-          <a href="destination.html"><div class="index__main--explore">Explore</div></a>
+          <div class="index__main--btn">
+            <a href="destination.html"><div class="index__main--explore">Explore</div></a>
+          </div>
+            
+          
       </div>
   </div>
 

@@ -5,6 +5,9 @@ const destPlanetDesc = document.querySelector('.destination__main--content-descr
 const destAvgDist = document.getElementById('avg_dist');
 const destEstTime = document.getElementById('est_time');
 const planetImg = document.getElementById('dest_img')
+const nav = document.querySelector('.nav')
+const navBurger = document.querySelector('.nav_burger')
+
 
 const crewListBtn = document.querySelectorAll('.radio-btn');
 const crewTitle = document.getElementById('crew__title');
@@ -36,6 +39,7 @@ xhttp.send();
 function removePlanetClasses(){
     destList.forEach(item => item.classList.remove('active'))
 }
+
 function ChangeContent(planetName){
      //Name
      console.log(planetName.name.toLowerCase());
@@ -48,6 +52,13 @@ function ChangeContent(planetName){
 
      //Img
     planetImg.src = `starter-code/assets/destination/image-${planetName.name.toLowerCase()}.webp`;
+    planetImg.animate([
+    {opacity:'0'},
+    {opacity:'100'}
+    ],{
+        duration: 300,
+
+    })
     removePlanetClasses()
 
 }
@@ -75,6 +86,12 @@ function removeCrewClasses(){
        crewName.innerHTML = crewMember.name;
        crewDesc.innerHTML = crewMember.bio;
        crewImg.src = `starter-code/assets/crew/image-${crewMember.name.toLowerCase().replace(' ','-')}.webp`;
+       crewImg.animate([
+          {opacity:'0'},
+           {opacity:'100'}
+       ],{
+           duration: 400
+       })
        removeCrewClasses();
    
    }
@@ -107,5 +124,8 @@ techListBtn.forEach((btn,i)=>{
 
 
 
-
-
+//Mobile nav
+navBurger.addEventListener('click',()=>{
+    nav.classList.toggle('active');
+    navBurger.classList.toggle('active')
+})
